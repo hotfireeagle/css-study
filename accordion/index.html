@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <title>test page</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="test web" />
+    <meta name="description" content="for test" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="lll" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-size: 62.5%;
+        }
+        
+        .accordionMenu {
+            background-color: #fff;
+            color: #424242;
+            font: 12px Arial, Verdana, sans-serif;
+            margin: 0 auto;
+            /*使得整体可以居中*/
+            padding: 10px;
+            width: 100%;
+        }
+        
+        .accordionMenu h2 {
+            margin: 5px 0;
+            padding: 0;
+            /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+            position: relative;
+        }
+        
+        .accordionMenu h2:after {
+            border: 5px solid #fff;
+            border-color: #fff transparent transparent;
+            content: "";
+            height: 0;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            width: 0;
+        }
+        
+        .accordionMenu h2 a {
+            background-color: #8f8f8f;
+            background-color: -moz-linear-gradient(top, #cecece, #8f8f8f);
+            background-color: -webkit-linear-gradient(top, #cecece, #8f8f8f);
+            background-color: -ms-linear-gradient(top, #cecece, #8f8f8f);
+            background-color: -o-linear-gradient(top, #cecece, #8f8f8f);
+            background-color: linear-gradient(top, #cecece, #8f8f8f);
+            border-radius: 5px;
+            color: #424242;
+            display: block;
+            font-size: 2.0rem;
+            font-weight: normal;
+            margin: 0;
+            padding: 10px 10px;
+            text-shadow: 5px 5px 5px #aeaeae;
+            text-decoration: none;
+        }
+        
+        .accordionMenu :target h2 a,
+        .accordionMenu h2 a:focus,
+        .accordionMenu h2 a:hover,
+        .accordionMenu h2 a:active {
+            background-color: #2288dd;
+            background-color: -moz-linear-gradient(top, #6bb22f, red);
+            background-color: -webkit-linear-gradient(top, #6bb22f, #2288dd);
+            background-color: -o-linear-gradient(top, #6bb22f, #2288dd);
+            background-color: -ms-linear-gradient(top, #6bb22f, #2288dd);
+            background-color: linear-gradient(top, #6bb22f, red);
+            color: #fff;
+        }
+        
+        .accordionMenu p {
+            font-size: 1.5rem;
+            margin: 0;
+            height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+            -moz-transition: height 0.5s ease-in;
+            -webkit-transition: height 0.5s ease-in;
+            -o-transition: height 0.5s ease-in;
+            -ms-transition: height 0.5s ease-in;
+            transition: height 0.5s ease-in;
+        }
+        /*whitspace*/
+        
+        .accordionMenu :target p {
+            height: 100px;
+            overflow: auto;
+        }
+        
+        .accordionMenu :target h2:after {
+            border-color: transparent transparent transparent #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordionMenu">
+        <div class="menuSection" id="brand">
+            <h2><a href="#brand">Brand</a></h2>
+            <p>缤纷的音乐盒木马还旋转着 我叮咚的弹奏着童年的纯真快乐 亲爱的这时刻有梦就大声唱歌 我们迎着风边走边唱 边坚定来自于远方那坚定的信仰 沿着那溪边走有水车的声音 我走着看着风中摇曳可爱的蒲公英 经过凉亭我们穿越竹林 看着山顶如棉花糖的白云
+            </p>
+        </div>
+        <div class="menuSection" id="promotion">
+            <h2><a href="#promotion">promotion</a></h2>
+            <p>缤纷的音乐盒木马还旋转着 我叮咚的弹奏着童年的纯真快乐 亲爱的这时刻有梦就大声唱歌 我们迎着风边走边唱 边坚定来自于远方那坚定的信仰 沿着那溪边走有水车的声音 我走着看着风中摇曳可爱的蒲公英 经过凉亭我们穿越竹林 看着山顶如棉花糖的白云
+            </p>
+        </div>
+        <div class="menuSection" id="event">
+            <h2><a href="#event">Event</a></h2>
+            <p>缤纷的音乐盒木马还旋转着 我叮咚的弹奏着童年的纯真快乐 亲爱的这时刻有梦就大声唱歌 我们迎着风边走边唱 边坚定来自于远方那坚定的信仰 沿着那溪边走有水车的声音 我走着看着风中摇曳可爱的蒲公英 经过凉亭我们穿越竹林 看着山顶如棉花糖的白云
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

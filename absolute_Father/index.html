@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <title>test page</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="test page" />
+    <meta name="description" content="for test" />
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="hahahai" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            font-size: 62.5%;
+        }
+        /*responsive image setup*/
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .pic {
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            top: -900px;
+            left: -800px;
+        }
+        
+        .div1 {
+            width: 60%;
+            margin: 0 auto;
+            background-color: rgb(121, 121, 121);
+        }
+        
+        .div2 {
+            width: 80%;
+            margin: 0 10% auto 10%;
+            text-align: center;
+            background-color: rgb(72, 72, 72);
+        }
+        
+        #btn {
+            color: #fff;
+            background-color: #0086cc;
+            background-color: -webkit-linear-gradient(left, #0086cc, blue);
+            background-color: -moz-linear-gradient(left, #0086cc, blue);
+            background-color: -o-linear-gradient(left, #0086cc, blue);
+            background-color: -ms-linear-gradient(left, #0086cc, blue);
+            background-color: linear-gradient(left, #0086cc, blue);
+            font-size: 1.5rem;
+            vertical-align: middle;
+            border-color: #0086cc;
+            border-radius: 8px;
+        }
+        
+        #btn:hover {
+            background-color: #004100;
+            background-color: -webkit-linear-gradient(left, #004100, #023f00);
+            background-color: -moz-linear-gradient(left, #004100, #023f00);
+            background-color: -o-linear-gradient(left, #004100, #023f00);
+            background-color: -ms-linear-gradient(left, #004100, #023f00);
+            background-color: linear-gradient(left, #004100, #023f00);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">
+            <img class="pic" src="./img/1.jpg" alt="beauty" />
+            <input type="button" value="CHANGE" id="btn" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            var img = document.querySelector("img");
+            img.style.position = "static";
+        }
+    </script>
+</body>
+
+</html>
