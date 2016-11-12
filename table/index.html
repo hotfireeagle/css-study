@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <title>test page</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="test page" />
+    <meta name="description" content="for test" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="hhh" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            font-size: 62.5%;
+        }
+        /*==============初始化格式=============*/
+        
+        table {
+            width: 800px;
+            margin: 100px auto;
+            font-size: 2.5rem;
+            color: #444;
+            border-spacing: 0;
+        }
+        /*==============圆角表格===============*/
+        
+        .circleTable {
+            border-radius: 5px;
+        }
+        
+        .circleTable tr {
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+        
+        .circleTable tr:hover {
+            background-color: cornflowerblue;
+        }
+        
+        .circleTable th,
+        .circleTable td {
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .circleTable tr:nth-last-of-type(1) td {
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .circleTable th {
+            background-color: #dce9f9;
+            background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+        
+        tr>th:nth-of-type(1),
+        tr>td:nth-of-type(1) {
+            border-left: none;
+        }
+        /*设置第一个单元格的左上角为圆角*/
+        
+        .circleTable th:nth-of-type(1) {
+            border-radius: 5px 0 0 0;
+        }
+        /*设置最后一个单元格的右下角为圆角*/
+        
+        .circleTable td:nth-last-of-type(1) {
+            border-radius: 0 0 5px 0;
+        }
+        /*设置第一行的最后一个单元格的右上角为圆角*/
+        
+        .circleTable th:nth-last-of-type(1) {
+            border-radius: 0 5px 0 0;
+        }
+        /*设置最后一行的第一个元素的左下角为圆角*/
+        
+        .circleTable tr:nth-last-of-type(1)>td:nth-of-type(1) {
+            border-radius: 0 0 0 5px;
+        }
+        /*==============斑马线样式=================*/
+        
+        .zebra td,
+        .zebra th {
+            padding: 10px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        
+        .zebra>tbody tr:nth-of-type(2n+1) {
+            background-color: #f5f5f5;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+        }
+        
+        .zebra th {
+            text-align: left;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+            border-bottom: 1px solid #ccc;
+            background-color: #eee;
+            background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+            background-image: linear-gradient(top, #f5f5f5, #eee);
+        }
+        
+        .zebra th:nth-of-type(1) {
+            border-radius: 5px 0 0 0;
+        }
+        
+        .zebra th:nth-last-of-type(1) {
+            border-radius: 0 5px 0 0;
+        }
+        
+        .zebra td:nth-last-of-type(1) {
+            border-radius: 0 0 5px 0;
+        }
+        
+        .zebra tr:nth-last-of-type(1) td:nth-of-type(1) {
+            border-radius: 0 0 0 5px;
+        }
+        
+        .zebra tr:hover {
+            background-color: cadetblue;
+        }
+        
+        .zebra tr {
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="circleTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>IMDB TOP 10 MOVIES</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>The Shawshank Redemption</td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The GodFather</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The GodFather:Part 2</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>The Good,the Bad and the Ugly</td>
+                <td>1966</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="zebra">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>IMDB TOP 10 MOVIES</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>The Shawshank Redemption</td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The GodFather</td>
+                <td>1972</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The GodFather:Part 2</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>The Good,the Bad and the Ugly</td>
+                <td>1966</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
